@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Crie um convite personalizado para celebrar momentos especiais."
+    />
+    <title>Festivite | Crie seu convite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Leckerli+One&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/styles/style.css" />
+    <script src="Assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-layout">
+      <aside class="preview-panel" aria-label="Prévia do convite">
+        <a class="brand" href="#" aria-label="Festivite, início">
+          <span class="brand__icon" aria-hidden="true">🎉</span>
+          <span class="brand__name">Festivite</span>
+          <span class="brand__tagline">Crie convites, celebre momentos</span>
+        </a>
+
+        <div class="preview-card">
+          <img
+            class="preview-card__image"
+            src="Assets/imgs/Background.png"
+            alt="Fatia de bolo colorido com uma vela acesa"
+          />
+          <div class="preview-card__content">
+            <span class="preview-card__eyebrow" id="preview-theme"
+              >VOCÊ ESTÁ CONVIDADO</span
+            >
+            <h1 class="preview-card__title" id="preview-title">
+              Seu próximo grande momento
+            </h1>
+            <div class="preview-card__details">
+              <span class="preview-card__detail" id="preview-date" hidden>
+                <img src="Assets/imgs/calendar.png" alt="" />
+                <span></span>
+              </span>
+              <span class="preview-card__detail" id="preview-location" hidden>
+                <img src="Assets/imgs/building-2.png" alt="" />
+                <span></span>
+              </span>
+            </div>
+            <p class="preview-card__description">
+              <span id="preview-description">
+                Uma ocasião especial merece uma celebração inesquecível.
+              </span>
+            </p>
+          </div>
+          <span
+            class="preview-card__sparkle preview-card__sparkle--one"
+            aria-hidden="true"
+            >✦</span
+          >
+          <span
+            class="preview-card__sparkle preview-card__sparkle--two"
+            aria-hidden="true"
+            >✧</span
+          >
+        </div>
+
+        <p class="preview-note">Sua ideia, seu convite, sua celebração.</p>
+      </aside>
+
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="form-heading">
+          <h2 id="form-title">Crie seu convite</h2>
+        </div>
+
+        <form class="invite-form">
+          <section class="form-section" aria-labelledby="event-heading">
+            <h3 class="section-title" id="event-heading">
+              <img src="Assets/imgs/ticket.png" alt="" />
+              Sobre o evento
+            </h3>
+
+            <div class="field">
+              <label for="event-title">Título</label>
+              <input
+                id="event-title"
+                name="event-title"
+                type="text"
+                placeholder="Nome do evento"
+                required
+              />
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="event-start">Início</label>
+                <input
+                  id="event-start"
+                  name="event-start"
+                  type="datetime-local"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="event-end">Fim</label>
+                <input id="event-end" name="event-end" type="datetime-local" />
+              </div>
+            </div>
+
+            <div class="field-row event-details-row">
+              <fieldset class="field event-type">
+                <legend>Tipo</legend>
+                <div class="segmented-control">
+                  <label class="segmented-control__option">
+                    <input
+                      type="radio"
+                      name="event-type"
+                      value="presencial"
+                      checked
+                    />
+                    <span>Presencial</span>
+                  </label>
+                  <label class="segmented-control__option">
+                    <input type="radio" name="event-type" value="online" />
+                    <span>Online</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="event-location">Local</label>
+                <input
+                  id="event-location"
+                  name="event-location"
+                  type="text"
+                  placeholder="Link ou endereço"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="event-description">Descrição</label>
+              <textarea
+                id="event-description"
+                name="event-description"
+                rows="4"
+                maxlength="160"
+                aria-describedby="event-description-count"
+                placeholder="Escreva sobre os detalhes do evento"
+              ></textarea>
+              <span
+                class="character-count"
+                id="event-description-count"
+                aria-live="polite"
+                >0/160 caracteres</span
+              >
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="personalize-heading">
+            <h3 class="section-title" id="personalize-heading">
+              <img src="Assets/imgs/paintbrush-vertical.png" alt="" />
+              Personalização
+            </h3>
+
+            <fieldset class="field color-field">
+              <legend>Cor principal</legend>
+              <div class="color-options">
+                <label class="color-option">
+                  <input type="radio" name="color" value="blue" />
+                  <span
+                    class="color-dot color-dot--blue"
+                    aria-label="Azul"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="navy" />
+                  <span
+                    class="color-dot color-dot--navy"
+                    aria-label="Azul-marinho"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="purple" />
+                  <span
+                    class="color-dot color-dot--purple"
+                    aria-label="Roxo"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="fuchsia" />
+                  <span
+                    class="color-dot color-dot--fuchsia"
+                    aria-label="Fúcsia"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="pink" checked />
+                  <span
+                    class="color-dot color-dot--pink"
+                    aria-label="Rosa"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="orange" />
+                  <span
+                    class="color-dot color-dot--orange"
+                    aria-label="Laranja"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="yellow" />
+                  <span
+                    class="color-dot color-dot--yellow"
+                    aria-label="Amarelo"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="lime" />
+                  <span
+                    class="color-dot color-dot--lime"
+                    aria-label="Verde-limão"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="green" />
+                  <span
+                    class="color-dot color-dot--green"
+                    aria-label="Verde"
+                  ></span>
+                </label>
+                <label class="color-option">
+                  <input type="radio" name="color" value="cyan" />
+                  <span
+                    class="color-dot color-dot--cyan"
+                    aria-label="Ciano"
+                  ></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field theme-field">
+              <legend>Tema do convite</legend>
+              <div class="theme-options">
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="aniversario"
+                    data-image="infantil.png"
+                    checked
+                  />
+                  <span class="theme-card theme-card--birthday"
+                    ><span>Aniversário</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="infantil"
+                    data-image="formatura.png"
+                  />
+                  <span class="theme-card theme-card--kids"
+                    ><span>Infantil</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="formatura"
+                    data-image="aniversario.png"
+                  />
+                  <span class="theme-card theme-card--graduation"
+                    ><span>Formatura</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="casamento"
+                    data-image="casamento.png"
+                  />
+                  <span class="theme-card theme-card--wedding"
+                    ><span>Casamento</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="cha-de-bebe"
+                    data-image="chá_de_bebe.png"
+                  />
+                  <span class="theme-card theme-card--baby"
+                    ><span>Chá de bebê</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="cha-de-panela"
+                    data-image="chá_de_panela.png"
+                  />
+                  <span class="theme-card theme-card--tea"
+                    ><span>Chá de panela</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="carnaval"
+                    data-image="carnaval.png"
+                  />
+                  <span class="theme-card theme-card--carnival"
+                    ><span>Carnaval</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="pascoa"
+                    data-image="pascoa.png"
+                  />
+                  <span class="theme-card theme-card--easter"
+                    ><span>Páscoa</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="sao-joao"
+                    data-image="são_joao.png"
+                  />
+                  <span class="theme-card theme-card--june"
+                    ><span>São João</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="halloween"
+                    data-image="hallowen.png"
+                  />
+                  <span class="theme-card theme-card--halloween"
+                    ><span>Halloween</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="natal"
+                    data-image="natal.png"
+                  />
+                  <span class="theme-card theme-card--christmas"
+                    ><span>Natal</span></span
+                  >
+                </label>
+                <label class="theme-option">
+                  <input
+                    type="radio"
+                    name="theme"
+                    value="outro"
+                    data-image="outro.png"
+                  />
+                  <span class="theme-card theme-card--other"
+                    ><span>Outro</span></span
+                  >
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field-row upload-row">
+              <div class="field">
+                <span class="field-label">Estilo</span>
+                <label class="switch-control">
+                  <input
+                    id="background-style"
+                    name="background-style"
+                    type="checkbox"
+                  />
+                  <span class="switch-control__track" aria-hidden="true"></span>
+                  <span>Escuro</span>
+                </label>
+              </div>
+              <div class="field">
+                <label for="event-image">Foto de capa</label>
+                <div class="file-control">
+                  <label class="file-control__button" for="event-image">
+                    <img src="Assets/imgs/upload.png" alt="" />
+                    Selecionar
+                  </label>
+                  <input
+                    id="event-image"
+                    name="event-image"
+                    type="file"
+                    accept="image/*"
+                  />
+                  <span class="file-control__hint" id="event-image-name"
+                    >Nenhum arquivo selecionado</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="contact-heading">
+            <h3 class="section-title" id="contact-heading">
+              <img src="Assets/imgs/contact.png" alt="" />
+              Dados para contato
+            </h3>
+
+            <div class="field">
+              <label for="contact-name">Nome</label>
+              <input
+                id="contact-name"
+                name="contact-name"
+                type="text"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+                aria-describedby="contact-name-error"
+                required
+              />
+              <span class="field-error" id="contact-name-error">
+                <img src="Assets/imgs/circle-alert.png" alt="" />
+                Campo obrigatório
+              </span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="contact-email">E-mail</label>
+                <input
+                  id="contact-email"
+                  name="contact-email"
+                  type="email"
+                  placeholder="exemplo@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="contact-phone">Telefone</label>
+                <input
+                  id="contact-phone"
+                  name="contact-phone"
+                  type="tel"
+                  placeholder="(99) 99999-9999"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+          </section>
+
+          <fieldset class="consent-options">
+            <legend class="visually-hidden">Termos e permissões</legend>
+            <label class="checkbox-control">
+              <input type="checkbox" name="terms" required />
+              <span>
+                Li e concordo com os <a href="#">Termos e Condições</a> e com a
+                <a href="#">Política de Privacidade</a>.
+              </span>
+            </label>
+            <label class="checkbox-control">
+              <input type="checkbox" name="email-updates" />
+              <span>Aceito receber atualizações e promoções por e-mail.</span>
+            </label>
+            <label class="checkbox-control">
+              <input type="checkbox" name="sms-updates" />
+              <span>Aceito receber atualizações e promoções por SMS.</span>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="submit-button" type="submit">
+              <img src="Assets/imgs/ticket.png" alt="" />
+              Gerar convite
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
